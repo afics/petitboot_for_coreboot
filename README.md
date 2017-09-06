@@ -58,6 +58,8 @@ When calling kexec to load a new kernel, the new kernel does not necesseraly hav
 If you set up disk encryption this might be a problem since you cannot see the password prompt.
 To work around this you can add a KMS module like i915 to you distro's bzImage or initrd.
 
+If you're using an NVIDIA graphics card and have nouveau driver in the kernel, you may need to add `nouveau.config=NvForcePost=1` to the Linux command line arguments to reinitialize the graphics card.
+
 ## Customize buildroot, linux
 To customize buildroot, run in the petitboot\_for\_coreboot directory:
 
